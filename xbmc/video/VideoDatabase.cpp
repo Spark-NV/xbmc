@@ -7495,11 +7495,8 @@ bool CVideoDatabase::GetSortedVideos(const MediaType &mediaType, const std::stri
 
   SortDescription sorting = sortDescription;
   if (sortDescription.sortBy == SortByFile || sortDescription.sortBy == SortByTitle ||
-      sortDescription.sortBy == SortBySortTitle || sortDescription.sortBy == SortByOriginalTitle ||
-      sortDescription.sortBy == SortByLabel || sortDescription.sortBy == SortByDateAdded ||
-      sortDescription.sortBy == SortByRating || sortDescription.sortBy == SortByUserRating ||
-      sortDescription.sortBy == SortByYear || sortDescription.sortBy == SortByLastPlayed ||
-      sortDescription.sortBy == SortByPlaycount)
+      sortDescription.sortBy == SortBySortTitle || sortDescription.sortBy == SortByLabel ||
+      sortDescription.sortBy == SortByDateAdded || sortDescription.sortBy == SortByYear)
     sorting.sortAttributes = (SortAttribute)(sortDescription.sortAttributes | SortAttributeIgnoreFolders);
 
   bool success = false;
