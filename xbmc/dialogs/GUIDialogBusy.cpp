@@ -80,7 +80,7 @@ bool CGUIDialogBusy::WaitOnEvent(CEvent &event, unsigned int displaytime /* = 10
     CServiceBroker::GetGUI()->GetWindowManager().GetWindow(WINDOW_DIALOG_BUSY));
     if (dialog)
     {
-      if (++dialog->m_waiters == 1))
+      if (++dialog->m_waiters == 1)
       {
         dialog->Open();
       }
